@@ -55,7 +55,20 @@
   /* Effects */
   --se-shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
   --se-shadow-md: 0 4px 12px rgb(15 23 42 / 0.1);
+  --se-shadow-lg: 0 12px 32px rgb(15 23 42 / 0.18);
   --se-transition-fast: 120ms ease;
+  --se-transition-base: 200ms ease;
+  --se-transition-slow: 300ms ease;
+  --se-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Overlay */
+  --se-color-backdrop: rgb(15 23 42 / 0.5);
+
+  /* Layering */
+  --se-z-tooltip: 1000;
+  --se-z-popover: 1500;
+  --se-z-modal: 2000;
+  --se-z-toast: 3000;
 
   /* Controls */
   --se-control-height: 36px;
@@ -76,4 +89,6 @@
   --se-color-focus: rgb(59 130 246 / 0.4);
   --se-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
   --se-shadow-md: 0 4px 12px rgb(0 0 0 / 0.5);
+  --se-shadow-lg: 0 12px 32px rgb(0 0 0 / 0.6);
+  --se-color-backdrop: rgb(0 0 0 / 0.6);
 }
