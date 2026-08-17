@@ -10,7 +10,7 @@ Git-tagged distribution (no npm registry). Pin an exact release tag:
 
 ```json
 "dependencies": {
-  "@devstroop/react-ui": "github:devstroop/react-ui#v0.1.0"
+  "@devstroop/react-ui": "git+https://codeberg.org/devstroop/react-ui.git#v0.2.0"
 }
 ```
 
