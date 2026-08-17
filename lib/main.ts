@@ -37,3 +37,12 @@ export type { CheckboxProps } from "./components/Checkbox/Checkbox";
 
 export { Switch } from "./components/Switch/Switch";
 export type { SwitchProps } from "./components/Switch/Switch";
+
+export { Tabs } from "./components/Tabs/Tabs";
+export type { TabsProps, TabsVariant, TabItem } from "./components/Tabs/Tabs";
+
+export { Accordion } from "./components/Accordion/Accordion";
+export type { AccordionProps, AccordionItem } from "./components/Accordion/Accordion";
+
+export { Textarea } from "./components/Textarea/Textarea";
+export type { TextareaProps, TextareaSize } from "./components/Textarea/Textarea";
