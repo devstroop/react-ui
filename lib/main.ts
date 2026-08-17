@@ -49,3 +49,12 @@ export type { ToastProviderProps, ToastOptions, ToastTone } from "./components/T
 
 export { Alert } from "./components/Alert/Alert";
 export type { AlertProps, AlertTone } from "./components/Alert/Alert";
+
+export { Skeleton } from "./components/Skeleton/Skeleton";
+export type { SkeletonProps, SkeletonVariant } from "./components/Skeleton/Skeleton";
+
+export { Progress } from "./components/Progress/Progress";
+export type { ProgressProps, ProgressTone } from "./components/Progress/Progress";
+
+export { Avatar } from "./components/Avatar/Avatar";
+export type { AvatarProps, AvatarSize, AvatarStatus } from "./components/Avatar/Avatar";
