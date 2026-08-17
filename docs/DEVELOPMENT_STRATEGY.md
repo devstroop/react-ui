@@ -12,7 +12,7 @@ worktrees, pull requests, CI, and releases all follow the rules below.
 2. **One issue → one branch → one PR.** Every unit of work is traceable end to
    end (issue number appears in branch name, PR title, and merge commit).
 3. **Plan first, code second.** Each cycle starts as a locally drafted plan,
-   is finalized into GitHub issues/sub-issues, and only then does implementation
+   is finalized into issues/sub-issues on the repository host (GitHub or Codeberg), and only then does implementation
    begin.
 4. **Parallel work is free** — development happens in dedicated worktrees, so
    multiple branches are never blocked by a dirty working tree.
@@ -48,7 +48,7 @@ master                 production — protected; only via release PR from develo
 | Lifecycle | Implementation branches are short-lived (hours–days). Accumulator branches live for a cycle. `develop` is permanent. `master` is permanent |
 | Protection | `master` and `develop` require PR review + green CI; direct pushes are rejected |
 
-## 3. Issue lifecycle (GitHub)
+## 3. Issue lifecycle (repository host)
 
 ```
 Draft (local) → Finalize (GitHub) → Assign (labels + milestone) → Implement → Review → Close
@@ -159,12 +159,12 @@ A workflow triggered on a branch that does not exist is a silent CI outage.
 
 ## 9. Per-repository mapping
 
-| Repository | Stack | Default branch | Accumulators | CI trigger |
-|---|---|---|---|---|
-| **SoftEther-App** | Flutter + Zig (libsoftether) | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs |
-| **SoftEther-Web** | React + Vite + Hono + Cloudflare Workers | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs |
-| **react-ui** | React UI library (vite lib mode) | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs |
-| **libsoftether** | Zig | `master` | `fixes/` `features/` | `master` + PRs |
+| Repository | Stack | Host | Default branch | Accumulators | CI trigger |
+|---|---|---|---|---|---|---|
+| **SoftEther-App** | Flutter + Zig (libsoftether) | GitHub | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs |
+| **SoftEther-Web** | React + Vite + Hono + Cloudflare Workers | GitHub | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs |
+| **react-ui** | React UI library (vite lib mode) | Codeberg (`codeberg.org/devstroop/react-ui`) | `master` | `fixes/` `features/` `chores/` `docs/` | `master` + PRs (Forgejo Actions, `.forgejo/workflows`) |
+| **libsoftether** | Zig | GitHub | `master` | `fixes/` `features/` | `master` + PRs |
 
 > Note: legacy branches named `fix/…`, `feat/…` and `develop` exist in history;
 > they are pre-strategy. All new work follows this document.
